@@ -1,0 +1,20 @@
+info:
+  app:
+    name: Product Service API V1
+    description: API and simple database to handle the products of the ABInBev ecommerce
+    version: 1.0
+
+server:
+  port: 9090
+
+spring:
+  profiles:
+    active: local
+  security:
+    user:
+      name: test
+      password: test
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/
+      database: local
