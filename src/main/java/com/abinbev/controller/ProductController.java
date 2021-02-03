@@ -18,7 +18,7 @@ public class ProductController {
 
     @GetMapping
     public ResponseEntity<Response<List<Product>>> listAll() {
-        List<Product> products = productService.listAll();
+        var products = productService.listAll();
 
         if (products.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -29,7 +29,7 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Response<Product>> getById(@PathVariable String id) {
-        Product product = this.productService.listById(id);
+        var product = this.productService.listById(id);
 
         if (product == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

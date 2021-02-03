@@ -14,6 +14,8 @@ public class Product {
     private BigDecimal price;
     private String brand;
 
+    public Product() {}
+
     public Product(String id, String name, String description, BigDecimal price, String brand) {
         this.id = id;
         this.name = name;
